@@ -1,0 +1,278 @@
+﻿Lucas Lemos de Souza - 2° TINF 
+1. O que é o retorno NaN em Javascript? Cite um tipo de condição em que este tipo pode ser gerado.
+NaN significa "Not a Number" (não é um número). É um valor especial do JavaScript que aparece quando você tenta realizar uma operação aritmética com um valor que não pode ser interpretado como número.
+Isso é comum, por exemplo, ao tentar multiplicar, dividir ou subtrair uma string que não representa um número, ou realizar outras operações inválidas.
+Exemplos práticos:
+let resultado1 = "abc" * 5;     // retorna NaN
+let resultado2 = 0 / 0;         // retorna NaN
+let resultado3 = parseInt("oi"); // retorna NaN
+
+
+Importante: NaN é do tipo "number", mas indica um erro. Pode ser testado com isNaN(valor).
+
+2. É possível adicionar uma configuração CSS de múltiplas formas em um código HTML. Cite essas formas e dê exemplos de cada uma. Cite também a diferença entre utilizar cada uma dessas formas.
+O CSS pode ser aplicado em três formas principais dentro de um projeto HTML. Cada uma possui características e usos diferentes:
+🔹 1. Inline (dentro da tag HTML):
+Estilização feita diretamente no atributo style de um elemento.
+<p style="color: green; font-size: 18px;">Texto com estilo inline</p>
+
+
+🔹 2. Interno (usando a tag <style> no <head>):
+Bloco de CSS inserido dentro do HTML, útil para estilos específicos de uma página.
+<head>
+  <style>
+    p {
+      color: blue;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+
+🔹 3. Externo (arquivo separado .css):
+Forma mais organizada e reutilizável. Ideal para projetos grandes.
+<link rel="stylesheet" href="style.css">
+
+
+No arquivo style.css:
+p {
+  color: red;
+  font-size: 20px;
+}
+
+
+⚠️ Diferenças:
+* Inline: mais rápido, mas prejudica manutenção e separação de responsabilidades.
+
+* Interno: bom para testes ou estilos específicos de uma página.
+
+* Externo: melhor prática, pois permite reutilização e organização do código.
+
+3. Explique a diferença entre as tags <div> e <span>. Dê exemplos de quando usar cada uma.
+As tags <div> e <span> são usadas para estruturar e agrupar conteúdo HTML, mas têm comportamentos diferentes:
+🔹 <div>:
+   * É um elemento de bloco (block-level).
+
+   * Ocupa toda a largura disponível.
+
+   * Usado para organizar seções maiores do conteúdo.
+
+🔹 <span>:
+      * É um elemento inline.
+
+      * Ocupa apenas o espaço necessário ao seu conteúdo.
+
+      * Usado para aplicar estilo ou manipular pequenas partes de texto.
+
+🧩 Exemplo prático:
+<div>
+  <h2>Seção do site</h2>
+  <p>Parágrafo dentro da div.</p>
+</div>
+
+
+<p>O <span style="color: red;">texto em vermelho</span> está dentro de um span.</p>
+
+4. Descreva o propósito da tag <head> em um documento HTML e cite pelo menos três elementos que podem estar dentro dela.
+A tag <head> é usada para armazenar informações que não são visíveis diretamente na página, mas são essenciais para o funcionamento e interpretação do documento.
+📌 Funções:
+         * Definir o título da aba.
+
+         * Especificar a codificação de caracteres.
+
+         * Conectar folhas de estilo (CSS) e scripts.
+
+🧩 Elementos comuns:
+            1. <title> – define o título da aba do navegador.
+
+            2. <meta> – informações como charset, viewport, autor, etc.
+
+            3. <link> – conecta arquivos externos como CSS ou ícones.
+
+            4. <style> – permite escrever CSS interno.
+
+            5. <script> – para incluir ou chamar JavaScript.
+
+5. Diferencie as listas ordenadas (<ol>) das listas não ordenadas (<ul>). Crie um exemplo de cada.
+🔹 <ol> – Lista ordenada:
+               * Os itens são numerados automaticamente.
+
+               * Usado quando a ordem importa (ex: passos de um processo).
+
+🔹 <ul> – Lista não ordenada:
+                  * Os itens aparecem com marcadores (bolinhas por padrão).
+
+                  * Usado quando a ordem não importa (ex: lista de compras).
+
+📌 Exemplos:
+<!-- Lista ordenada -->
+<ol>
+  <li>Ligar o computador</li>
+  <li>Abrir o navegador</li>
+  <li>Acessar o site</li>
+</ol>
+
+
+<!-- Lista não ordenada -->
+<ul>
+  <li>Maçã</li>
+  <li>Pão</li>
+  <li>Leite</li>
+</ul>
+
+
+6. O que significa a propriedade display no CSS? Compare o comportamento de block, inline e inline-block.
+A propriedade display controla como um elemento é exibido visualmente na página.
+📌 Tipos mais comuns:
+                     * block: ocupa toda a largura da linha, força quebra de linha.
+
+                        * Ex: <div>, <p>, <h1>
+
+                           * inline: ocupa apenas o espaço do conteúdo, não quebra linha.
+
+                              * Ex: <span>, <a>
+
+                                 * inline-block: como inline, mas permite definir largura e altura.
+
+🧩 Exemplo:
+.caixa {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background-color: lightblue;
+}
+
+7. Explique o que é o Box Model no CSS e descreva suas partes de dentro para fora.
+O Box Model (modelo de caixa) é a forma como o CSS representa cada elemento na tela. Cada elemento é tratado como uma caixa que contém:
+🔄 Partes de dentro para fora:
+                                    1. Content – onde o texto ou imagem aparece.
+
+                                    2. Padding – espaço interno entre o conteúdo e a borda.
+
+                                    3. Border – borda do elemento.
+
+                                    4. Margin – espaço entre o elemento e os elementos vizinhos.
+
+🧩 Exemplo:
+.caixa {
+  width: 200px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 30px;
+}
+
+8. Qual é a função das tags semânticas no HTML5, como <header>, <section>, <article> e <footer>? Dê exemplos de uso.
+As tags semânticas foram criadas no HTML5 para substituir divs genéricas por elementos com significados claros.
+📌 Funções:
+                                       * Tornar o código mais legível.
+
+                                       * Ajudar mecanismos de busca e leitores de tela.
+
+                                       * Melhorar a estrutura do conteúdo.
+
+🧩 Exemplos:
+<header>
+  <h1>Minha Página</h1>
+</header>
+
+
+<section>
+  <article>
+    <h2>Notícia</h2>
+    <p>Conteúdo do artigo...</p>
+  </article>
+</section>
+
+
+<footer>
+  <p>Todos os direitos reservados</p>
+</footer>
+
+9. Explique o que é e para que serve o atributo target="_blank" em um link. Quais cuidados de segurança devem ser tomados ao utilizá-lo?
+O atributo target="_blank" faz com que o link seja aberto em uma nova aba ou janela do navegador.
+🧩 Exemplo:
+<a href="https://site.com" target="_blank">Visite o site</a>
+
+
+⚠️ Cuidados:
+Abrir links externos em nova aba pode criar brechas de segurança. O ideal é sempre incluir:
+<a href="https://site.com" target="_blank" rel="noopener noreferrer">Link seguro</a>
+
+
+                                          * noopener: impede que a nova página tenha acesso ao window.opener.
+
+                                          * noreferrer: remove o referenciador da origem.
+
+10. O que é a propriedade flex no CSS e como ela é usada?
+A propriedade flex faz parte do Flexbox, um sistema de layout moderno no CSS que facilita o alinhamento e a distribuição de espaço entre elementos.
+Para usar, o elemento pai precisa ter:
+display: flex;
+
+
+📌 Exemplo:
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+📎 Propriedades úteis:
+                                             * justify-content: controla o alinhamento horizontal.
+
+                                             * align-items: controla o alinhamento vertical.
+
+                                             * flex-direction: muda a direção (linha ou coluna).
+
+
+11. O que são transições (transition) no CSS e como podem ser usadas para criar efeitos de animação simples? Crie um exemplo básico.
+Transições permitem animar mudanças suaves nas propriedades CSS. Elas são usadas para dar mais interatividade e tornar a interface mais agradável.
+📌 Exemplo simples:
+.botao {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+
+.botao:hover {
+  background-color: darkblue;
+}
+
+
+Quando o usuário passa o mouse sobre o botão, a cor muda suavemente ao invés de mudar instantaneamente.
+16. Quais as diferenças entre criar uma variável do tipo const, var e let? Cite exemplos.
+📌 var:
+                                                * Escopo: função (não respeita blocos {}).
+
+                                                * Pode ser redeclarada.
+
+                                                * Pode ser reatribuída.
+
+                                                * ❌ Desencorajada em novos projetos.
+
+📌 let:
+                                                   * Escopo: bloco ({}).
+
+                                                   * Pode ser reatribuída.
+
+                                                   * ❌ Não pode ser redeclarada no mesmo escopo.
+
+                                                   * ✅ Ideal para variáveis que mudam de valor.
+
+📌 const:
+                                                      * Escopo: bloco.
+
+                                                      * ✅ Deve ser inicializada e não pode ser reatribuída.
+
+                                                      * Ideal para valores fixos e segurança de código.
+
+🧪 Exemplo:
+var x = 10;
+let y = 20;
+const z = 30;
+
+
+x = 15;   // ok
+y = 25;   // ok
+z = 40;   // erro! const não pode ser alterada
