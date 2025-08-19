@@ -275,4 +275,75 @@ const z = 30;
 
 x = 15;   // ok
 y = 25;   // ok
+
 z = 40;   // erro! const não pode ser alterada
+
+18. Qual a diferença entre JavaScript e Java?
+
+JavaScript e Java são linguagens completamente diferentes:
+| Característica | JavaScript                                     | Java                                 |
+| -------------- | ---------------------------------------------- | ------------------------------------ |
+| Tipo           | Linguagem de script                            | Linguagem compilada                  |
+| Execução       | Browser (client-side) ou Node.js (server-side) | Máquina Virtual Java (JVM)           |
+| Sintaxe        | Dinâmica, interpretada                         | Estruturada, compilada               |
+| Tipagem        | Fraca e dinâmica                               | Forte e estática                     |
+| Objetivo       | Interatividade na web                          | Aplicações desktop, Android, backend |
+
+19. Qual a diferença entre == e === no JavaScript? Dê exemplos práticos.
+
+== → compara valores, realiza conversão de tipos.
+
+=== → compara valores e tipos, sem conversão.
+
+Exemplo:
+console.log(5 == '5');   // true  → converte '5' para número
+console.log(5 === '5');  // false → tipos diferentes (número vs string)
+
+20. O que são operadores lógicos (&&, ||, !) e como eles podem ser usados em condicionais? Exemplifique.
+
+&& (E lógico): todas as condições devem ser verdadeiras.
+
+|| (OU lógico): basta uma condição verdadeira.
+
+! (NÃO lógico): inverte o valor booleano.
+
+Exemplo:
+let idade = 20;
+let temCNH = true;
+
+if (idade >= 18 && temCNH) {
+    console.log("Pode dirigir");
+} else {
+    console.log("Não pode dirigir");
+}
+
+21. É possível adicionar novas propriedades a um objeto depois de criado? Como?
+
+Sim, em JavaScript objetos são dinâmicos.
+
+Exemplo:
+let pessoa = { nome: "João" };
+pessoa.idade = 25;
+console.log(pessoa); // { nome: "João", idade: 25 }
+
+22. Qual a diferença entre null e undefined no JavaScript?
+Conceito	null	undefined
+Definido?	Sim (valor nulo intencional)	Não definido (ausência de valor)
+Tipo	objeto	indefinido
+Usado quando	Valor propositalmente vazio	Variável não inicializada ou não existe
+Exemplo:
+let a = null;        // Valor intencionalmente vazio
+let b;               // undefined (não foi atribuído)
+
+23. O que é um objeto em JavaScript e como ele é declarado? Dê um exemplo básico.
+
+Um objeto é uma coleção de pares chave: valor.
+
+Exemplo:
+let carro = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    ano: 2020
+};
+
+25- Revisei todos os meus projetos HTML e CSS disponíveis no GitHub. Verifiquei a estrutura semântica dos documentos, corrigi indentação em alguns arquivos HTML e padronizei o uso de classes no CSS. Testei a responsividade com media queries e ativei o GitHub Pages para visualizar o layout final em diferentes dispositivos.
